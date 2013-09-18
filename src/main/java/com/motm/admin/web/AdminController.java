@@ -14,6 +14,7 @@ import logic.ILogic;
 import logic.Logic;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -120,5 +121,11 @@ public class AdminController
 		}	
 		logger.log(Level.INFO, "normal finish method getIndex");
 		return view;
+	}
+	
+	@RequestMapping(value="/submitTrxs", method = RequestMethod.POST)
+	public int submitTrxs(@RequestBody String bunchOfTrxs)
+	{
+		return logic.submitTrxsAsTextBlock(bunchOfTrxs);
 	}
 }
