@@ -52,6 +52,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		
 
 		<dependency>
@@ -60,6 +65,12 @@
 			<version>3.12.1.GA</version>
 		</dependency>
 
+	
+		<dependency>
+			<groupId>RedemptionEngine</groupId>
+			<artifactId>RedemptionEngine</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 
 		<dependency>

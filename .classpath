@@ -12,9 +12,5 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/RedemptionEngine"/>
-	<classpathentry kind="lib" path="D:/Work/motm/src/main/webapp/WEB-INF/lib/jedis-2.1.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/motm/src/main/webapp/WEB-INF/lib/mongo-java-driver-2.9.3.jar"/>
-	<classpathentry kind="lib" path="D:/Work/motm/src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.20.jar"/>
-	<classpathentry kind="lib" path="D:/Work/motm/src/main/webapp/WEB-INF/lib/re-core.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
