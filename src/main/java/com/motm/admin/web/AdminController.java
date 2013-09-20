@@ -47,20 +47,23 @@ public class AdminController
 			e1.printStackTrace();
 		}
 		
-		try
-		{
-			logic.setUp();
-		} catch (ParseException e)
-		{
-			logic = null;
-			e.printStackTrace();
-		} catch (IOException e)
-		{
-			logic = null;
-			e.printStackTrace();
-		}
 	}
 
+	@RequestMapping(value="/init",method=RequestMethod.GET)
+	public String init()
+	{
+		try{
+			logic.setUp();
+		}
+		catch(Exception e)
+		{
+			logic =null;
+			e.printStackTrace();
+			return "no good";
+		}
+		return "good";
+	}
+	
 	@RequestMapping(value="/index", method=RequestMethod.POST)
 	public ModelAndView submitQuery(
 			@RequestParam(value="merid") String merid,
