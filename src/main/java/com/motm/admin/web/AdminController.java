@@ -80,6 +80,14 @@ public class AdminController
 	{
 		logger.log(Level.INFO, "start method 'submit query'");
 		System.out.println("start method 'submit query'");
+		System.out.println("merid: " + merid);
+		System.out.println("insees: " + insees);
+		System.out.println("ageGroup: " + ageGroup);
+		System.out.println("gender: " + gender);
+		System.out.println("fromDate: " + fromDate);
+		System.out.println("toDate: " + toDate);
+		System.out.println("minTrxsNum: " + minTrxNum);
+		System.out.println("maxTrxsNum: " + maxTrxNum);
 		
 		ModelAndView view = new ModelAndView("/WEB-INF/views/index.jsp");
 		if(logic == null)
@@ -134,9 +142,12 @@ public class AdminController
 		return view;
 	}
 	
-	@RequestMapping(value="/submitTrxs", method = RequestMethod.POST)
+	@RequestMapping(value="/submitTrxs", method = RequestMethod.POST, headers="content-type=text/plain")
 	public int submitTrxs(@RequestBody String bunchOfTrxs)
 	{
+		System.out.println("start method submitTrxs");
+		System.out.println("input data are: ");
+		System.out.println(bunchOfTrxs);
 		return logic.submitTrxsAsTextBlock(bunchOfTrxs);
 	}
 }
