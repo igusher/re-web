@@ -143,11 +143,13 @@ public class AdminController
 	}
 	
 	@RequestMapping(value="/submitTrxs", method = RequestMethod.POST, headers="content-type=text/plain")
-	public int submitTrxs(@RequestBody String bunchOfTrxs)
+	@ResponseBody
+	public String submitTrxs(@RequestBody String bunchOfTrxs)
 	{
 		System.out.println("start method submitTrxs");
 		System.out.println("input data are: ");
 		System.out.println(bunchOfTrxs);
-		return logic.submitTrxsAsTextBlock(bunchOfTrxs);
+		return ""+ logic.submitTrxsAsTextBlock(bunchOfTrxs);
 	}
 }
+

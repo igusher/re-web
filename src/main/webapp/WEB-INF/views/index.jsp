@@ -3,6 +3,7 @@
 <%@include file="header.jsp"%>
 
 
+	<c:out value="${previousResult}"></c:out>
 <form id="submitQuery" name='submitQuery'
 	action='/motm/motm/re/index' method='POST'>
 	<table>
