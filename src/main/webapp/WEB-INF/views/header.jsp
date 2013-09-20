@@ -6,6 +6,7 @@
 	<title>Redemption Engine</title>
   </head>
 <body>
+	<c:out value="${errorMessage}"></c:out>
   <header id="header"><p>Redemption Engine</p></header>
       <section id="content">
 	    

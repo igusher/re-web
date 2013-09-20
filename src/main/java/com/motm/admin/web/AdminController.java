@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.AgeGroup;
@@ -50,6 +51,7 @@ public class AdminController
 	}
 
 	@RequestMapping(value="/init",method=RequestMethod.GET)
+	@ResponseBody
 	public String init()
 	{
 		try{
@@ -77,11 +79,13 @@ public class AdminController
 			)
 	{
 		logger.log(Level.INFO, "start method 'submit query'");
+		System.out.println("start method 'submit query'");
 		
 		ModelAndView view = new ModelAndView("/WEB-INF/views/index.jsp");
 		if(logic == null)
 		{
 			logger.log(Level.INFO, "logic == null");
+			System.out.println("logic == null");
 			view.addObject("isError", true);
 			view.addObject("errorMessage", "Redemption Engine is not properly initialized");	
 			return view;
@@ -107,6 +111,7 @@ public class AdminController
 		int acidsCount = logic.getAcidsNum(reQuery);
 		view.addObject("previousResult", acidsCount);
 		logger.log(Level.INFO, "normal finish method submitQuery. return " + acidsCount);
+		System.out.println("normal finish method submitQuery. return " + acidsCount);
 		return view;
 		
 	}
@@ -115,14 +120,17 @@ public class AdminController
 	public ModelAndView getIndex()
 	{
 		logger.log(Level.INFO, "start method getIndex");
+		System.out.println("start method getIndex");
 		ModelAndView view = new ModelAndView("/WEB-INF/views/index.jsp");
 		if(logic == null)
 		{
 			view.addObject("isError", true);
 			view.addObject("errorMessage", "Redemption Engine is not properly initialized");
 			logger.log(Level.INFO, "logic == null");
+			System.out.println("logic == null");
 		}	
 		logger.log(Level.INFO, "normal finish method getIndex");
+		System.out.println("normal finish method getIndex");
 		return view;
 	}
 	
