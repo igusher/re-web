@@ -146,9 +146,9 @@ public class AdminController
 	@ResponseBody
 	public String submitTrxs(@RequestBody String bunchOfTrxs)
 	{
-		System.out.println("start method submitTrxs");
-		System.out.println("input data are: ");
-		System.out.println(bunchOfTrxs);
+		//System.out.println("start method submitTrxs");
+//		System.out.println("input data are: ");
+//		System.out.println(bunchOfTrxs);
 		return ""+ logic.submitTrxsAsTextBlock(bunchOfTrxs);
 	}
 }
